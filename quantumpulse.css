@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #e2e8f0;
+}
+
+.payment-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  overflow: hidden;
+}
+
+.payment-header {
+  padding: 32px 32px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.payment-logo {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(34, 197, 94, 0.14));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.18);
+}
+
+.payment-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: -0.02em;
+}
+
+.payment-subtitle {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+.payment-body {
+  padding: 28px 32px 32px;
+}
+
+.payment-section {
+  margin-bottom: 24px;
+}
+
+.payment-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+  letter-spacing: 0.01em;
+}
+
+.payment-input,
+.payment-select {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f8fafc;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-sizing: border-box;
+}
+
+.payment-input::placeholder {
+  color: #64748b;
+}
+
+.payment-input:focus,
+.payment-select:focus {
+  border-color: rgba(6, 182, 212, 0.7);
+  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.payment-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.payment-summary {
+  margin-top: 8px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.payment-summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #cbd5e1;
+  padding: 8px 0;
+}
+
+.payment-summary-item.total {
+  margin-top: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 16px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.payment-button {
+  width: 100%;
+  height: 54px;
+  margin-top: 24px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #06b6d4, #22c55e);
+  color: #001018;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+  box-shadow: 0 18px 40px rgba(6, 182, 212, 0.22);
+}
+
+.payment-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 46px rgba(6, 182, 212, 0.28);
+}
+
+.payment-button:active {
+  transform: translateY(0);
+}
+
+.payment-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.payment-note {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+.payment-status {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.payment-status.success {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.24);
+  color: #86efac;
+}
+
+.payment-status.error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.24);
+  color: #fca5a5;
+}
+
+.payment-status.processing {
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.24);
+  color: #67e8f9;
+}
+
+@media (max-width: 640px) {
+  .payment-page {
+    padding: 20px 12px;
+  }
+
+  .payment-card {
+    border-radius: 20px;
+  }
+
+  .payment-header {
+    padding: 24px 20px 18px;
+  }
+
+  .payment-body {
+    padding: 22px 20px 24px;
+  }
+
+  .payment-title {
+    font-size: 24px;
+  }
+
+  .payment-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .payment-button {
+    height: 52px;
+  }
+}
